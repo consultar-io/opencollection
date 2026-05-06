@@ -4,4 +4,4 @@
 
 Essa é a coleção do Bruno (OpenCollection) para as APIs do Consultar.IO.
 
-Clique no botão ou faça o clone do repositório [https://github.com/consultar-io/opencollection](https://github.com/consultar-io/opencollection) e abra o repositório no [Bruno](https://www.usebruno.com/).
+Clique no botão ou faça o clone do repositório e abra o repositório no [Bruno](https://www.usebruno.com/).
