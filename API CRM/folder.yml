@@ -1,0 +1,14 @@
+info:
+  name: API CRM
+  type: folder
+  seq: 6
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    ## Introdução
+
+    Esta API permite consultar e buscar informações sobre médicos registrados nos Conselhos Regionais de Medicina (CRM) do Brasil.
+  type: text/markdown

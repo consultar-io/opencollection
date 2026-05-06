@@ -1,0 +1,16 @@
+info:
+  name: API Inscrição Estadual
+  type: folder
+  seq: 3
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    ## Introdução
+
+    Esta API permite consultar informações sobre Inscrições Estaduais no SINTEGRA. A consulta de Inscrições Estaduais é realizada pelo CNPJ ou CPF do contribuinte, juntamente com a UF.
+
+    Também é possível consultar informações de Produtores Rurais pelo CPF.
+  type: text/markdown

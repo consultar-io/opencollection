@@ -1,0 +1,31 @@
+opencollection: 1.0.0
+
+info:
+  name: APIs
+
+request:
+  auth:
+    type: apikey
+    key: Authorization
+    value: Token {{token}}
+    placement: header
+  variables:
+    - name: token
+      value: ""
+
+docs:
+  content: |-
+    ## Sobre
+
+    As APIs do [Consultar.IO](https://consultar.io/?utm_source=docs&utm_medium=referral&utm_campaign=index) são APIs RESTful que permitem consultar e buscar informações sobre estabelecimentos, pessoas, profissionais e endereços.
+
+    ## Autenticação
+
+    Consulte a documentação de [Autenticação](https://docs.consultar.io/autenticacao/) para mais informações sobre o processo de autenticação.
+  type: text/markdown
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

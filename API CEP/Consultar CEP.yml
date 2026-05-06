@@ -1,0 +1,93 @@
+info:
+  name: Consultar CEP
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: https://consultar.io/api/v2/cep/consultar?cep=04571000
+  params:
+    - name: cep
+      value: "04571000"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: "200"
+    request:
+      url: https://consultar.io/api/v2/cep/consultar?cep=04571000
+      method: GET
+      params:
+        - name: cep
+          value: "04571000"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 29 Oct 2025 21:39:41 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: Content-Encoding
+          value: gzip
+        - name: allow
+          value: OPTIONS, GET, POST
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: referrer-policy
+          value: same-origin
+        - name: vary
+          value: Accept-Encoding
+        - name: vary
+          value: Accept, Cookie
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-frame-options
+          value: DENY
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: speculation-rules
+          value: '"/cdn-cgi/speculation"'
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 9965d3b52b50f21f-GRU
+      body:
+        type: json
+        data: |-
+          {
+              "cep": "04571000",
+              "cep_formatado": "04571-000",
+              "tipo": "Logradouro",
+              "caixa_postal": false,
+              "nome": null,
+              "nome_abreviado": null,
+              "tipo_logradouro": "Avenida",
+              "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+              "logradouro": "Avenida Engenheiro Luiz Carlos Berrini",
+              "complemento": "- até 99998 - lado par",
+              "bairro": "Cidade Monções",
+              "bairro_abreviado": "Cid Monções",
+              "localidade": "São Paulo",
+              "uf": "SP"
+          }
+
+docs: |-
+  ## Consultar CEP
+
+  **(Consultar pelo CEP)**
+
+  Consulta detalhes de um CEP específico.

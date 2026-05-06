@@ -1,0 +1,14 @@
+info:
+  name: API CRBM
+  type: folder
+  seq: 8
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    ## Introdução
+
+    Esta API permite consultar e buscar informações sobre profissionais e estabelecimentos registrados nos Conselhos Regionais de Biomedicina (CRBM) do Brasil.
+  type: text/markdown

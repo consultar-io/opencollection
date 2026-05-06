@@ -1,0 +1,14 @@
+info:
+  name: API CRF
+  type: folder
+  seq: 9
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    ## Introdução
+
+    Esta API permite consultar profissionais e estabelecimentos registrados nos Conselhos Regionais de Farmácia (CRF) do Brasil.
+  type: text/markdown

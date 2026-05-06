@@ -1,0 +1,459 @@
+info:
+  name: Buscar CEP
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: https://consultar.io/api/v2/cep/buscar?logradouro=Avenida Engenheiro Luiz Carlos Berrini&localidade=São Paulo&uf=SP
+  params:
+    - name: logradouro
+      value: Avenida Engenheiro Luiz Carlos Berrini
+      type: query
+    - name: localidade
+      value: São Paulo
+      type: query
+    - name: uf
+      value: SP
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: "200"
+    request:
+      url: https://consultar.io/api/v2/cep/buscar?logradouro=Avenida Engenheiro Luiz Carlos Berrini&localidade=São Paulo&uf=SP
+      method: GET
+      params:
+        - name: logradouro
+          value: Avenida Engenheiro Luiz Carlos Berrini
+          type: query
+        - name: localidade
+          value: São Paulo
+          type: query
+        - name: uf
+          value: SP
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 29 Oct 2025 21:43:25 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: Content-Encoding
+          value: gzip
+        - name: allow
+          value: OPTIONS, GET, POST
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: referrer-policy
+          value: same-origin
+        - name: vary
+          value: Accept-Encoding
+        - name: vary
+          value: Accept, Cookie
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-frame-options
+          value: DENY
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: speculation-rules
+          value: '"/cdn-cgi/speculation"'
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 9965d92e8ebef21f-GRU
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "cep": "04571010",
+                  "cep_formatado": "04571-010",
+                  "tipo": "Logradouro",
+                  "caixa_postal": false,
+                  "nome": null,
+                  "nome_abreviado": null,
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini",
+                  "complemento": "- até 1405 - lado ímpar",
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              },
+              {
+                  "cep": "04571011",
+                  "cep_formatado": "04571-011",
+                  "tipo": "Logradouro",
+                  "caixa_postal": false,
+                  "nome": null,
+                  "nome_abreviado": null,
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini",
+                  "complemento": "- de 1407 ao fim - lado ímpar",
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              },
+              {
+                  "cep": "04571000",
+                  "cep_formatado": "04571-000",
+                  "tipo": "Logradouro",
+                  "caixa_postal": false,
+                  "nome": null,
+                  "nome_abreviado": null,
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini",
+                  "complemento": "- até 99998 - lado par",
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              },
+              {
+                  "cep": "04571906",
+                  "cep_formatado": "04571-906",
+                  "tipo": "Grande Usuário",
+                  "caixa_postal": false,
+                  "nome": "Condomínio Edifício Carmel",
+                  "nome_abreviado": "Cond Ed Carmel",
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini, 962",
+                  "complemento": null,
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              },
+              {
+                  "cep": "04571900",
+                  "cep_formatado": "04571-900",
+                  "tipo": "Grande Usuário",
+                  "caixa_postal": false,
+                  "nome": "Companhia Brasileira de Distribuição - Pão de Açúcar",
+                  "nome_abreviado": "Companhia B Distribuição - Pão Açúca",
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini, 105",
+                  "complemento": null,
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              },
+              {
+                  "cep": "04571901",
+                  "cep_formatado": "04571-901",
+                  "tipo": "Grande Usuário",
+                  "caixa_postal": false,
+                  "nome": "Edifício Morumbi",
+                  "nome_abreviado": "Ed Morumbi",
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini, 801",
+                  "complemento": null,
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              },
+              {
+                  "cep": "04571936",
+                  "cep_formatado": "04571-936",
+                  "tipo": "Grande Usuário",
+                  "caixa_postal": false,
+                  "nome": "Telefônica Brasil S/A",
+                  "nome_abreviado": "Telefônica Brasil S/A",
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini, 1376",
+                  "complemento": null,
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              },
+              {
+                  "cep": "04571905",
+                  "cep_formatado": "04571-905",
+                  "tipo": "Grande Usuário",
+                  "caixa_postal": false,
+                  "nome": "Jaú Construtora Ltda",
+                  "nome_abreviado": "Jaú Construtora Ltda",
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini, 936",
+                  "complemento": null,
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              },
+              {
+                  "cep": "04571924",
+                  "cep_formatado": "04571-924",
+                  "tipo": "Grande Usuário",
+                  "caixa_postal": false,
+                  "nome": "Centro Administrativo Bandeirante",
+                  "nome_abreviado": "Centro Adm Bandeirante",
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini, 267",
+                  "complemento": null,
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              },
+              {
+                  "cep": "04571925",
+                  "cep_formatado": "04571-925",
+                  "tipo": "Grande Usuário",
+                  "caixa_postal": false,
+                  "nome": "Edifício Condomínio Berrini 550",
+                  "nome_abreviado": "Ed Cond Berrini 550",
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini, 550",
+                  "complemento": null,
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              },
+              {
+                  "cep": "04571926",
+                  "cep_formatado": "04571-926",
+                  "tipo": "Grande Usuário",
+                  "caixa_postal": false,
+                  "nome": "Edifício Condomínio Palace Berrini",
+                  "nome_abreviado": "Ed Cond Palace Berrini",
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini, 716",
+                  "complemento": null,
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              },
+              {
+                  "cep": "04571927",
+                  "cep_formatado": "04571-927",
+                  "tipo": "Grande Usuário",
+                  "caixa_postal": false,
+                  "nome": "Edifício Condomínio Bandeirantes",
+                  "nome_abreviado": "Ed Cond Bandeirantes",
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini, 828",
+                  "complemento": null,
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              },
+              {
+                  "cep": "04571928",
+                  "cep_formatado": "04571-928",
+                  "tipo": "Grande Usuário",
+                  "caixa_postal": false,
+                  "nome": "Edifício Condomínio Estanplaza",
+                  "nome_abreviado": "Ed Cond Estanplaza",
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini, 857",
+                  "complemento": null,
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              },
+              {
+                  "cep": "04571929",
+                  "cep_formatado": "04571-929",
+                  "tipo": "Grande Usuário",
+                  "caixa_postal": false,
+                  "nome": "Edifício Condomínio San Thomaz",
+                  "nome_abreviado": "Ed Cond San Thomaz",
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini, 1139",
+                  "complemento": null,
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              },
+              {
+                  "cep": "04571930",
+                  "cep_formatado": "04571-930",
+                  "tipo": "Grande Usuário",
+                  "caixa_postal": false,
+                  "nome": "Edifício Condomínio Berrini Laura",
+                  "nome_abreviado": "Ed Cond Berrini Laura",
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini, 1140",
+                  "complemento": null,
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              },
+              {
+                  "cep": "04571931",
+                  "cep_formatado": "04571-931",
+                  "tipo": "Grande Usuário",
+                  "caixa_postal": false,
+                  "nome": "Edifício Condomínio Urca",
+                  "nome_abreviado": "Ed Cond Urca",
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini, 1178",
+                  "complemento": null,
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              },
+              {
+                  "cep": "04571932",
+                  "cep_formatado": "04571-932",
+                  "tipo": "Grande Usuário",
+                  "caixa_postal": false,
+                  "nome": "Edifício Condomínio Sudameris",
+                  "nome_abreviado": "Ed Cond Sudameris",
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini, 1297",
+                  "complemento": null,
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              },
+              {
+                  "cep": "04571933",
+                  "cep_formatado": "04571-933",
+                  "tipo": "Grande Usuário",
+                  "caixa_postal": false,
+                  "nome": "Phenix",
+                  "nome_abreviado": "Phenix",
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini, 1375",
+                  "complemento": null,
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              },
+              {
+                  "cep": "04571934",
+                  "cep_formatado": "04571-934",
+                  "tipo": "Grande Usuário",
+                  "caixa_postal": false,
+                  "nome": "Edifício Condomínio Arthur Bernardes",
+                  "nome_abreviado": "Ed Cond Arthur Bernardes",
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini, 1500",
+                  "complemento": null,
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              },
+              {
+                  "cep": "04571935",
+                  "cep_formatado": "04571-935",
+                  "tipo": "Grande Usuário",
+                  "caixa_postal": false,
+                  "nome": "Berrini Trade Center",
+                  "nome_abreviado": "Berrini T Center",
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini, 1700",
+                  "complemento": null,
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              },
+              {
+                  "cep": "04571903",
+                  "cep_formatado": "04571-903",
+                  "tipo": "Grande Usuário",
+                  "caixa_postal": false,
+                  "nome": "Texas Instrumentos Eletrônicos do Brasil",
+                  "nome_abreviado": "Texas I E Brasil",
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini, 1461",
+                  "complemento": null,
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              },
+              {
+                  "cep": "04571902",
+                  "cep_formatado": "04571-902",
+                  "tipo": "Grande Usuário",
+                  "caixa_postal": false,
+                  "nome": "Sampaio Ferreira",
+                  "nome_abreviado": "Sampaio Ferreira",
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini, 1253",
+                  "complemento": null,
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              },
+              {
+                  "cep": "04571989",
+                  "cep_formatado": "04571-989",
+                  "tipo": "Locker",
+                  "caixa_postal": true,
+                  "nome": "LCK Locker Vivo Berrini",
+                  "nome_abreviado": "LCK Locker Vivo Berrini",
+                  "tipo_logradouro": "Avenida",
+                  "nome_logradouro": "Engenheiro Luiz Carlos Berrini",
+                  "logradouro": "Avenida Engenheiro Luiz Carlos Berrini, 1376",
+                  "complemento": null,
+                  "bairro": "Cidade Monções",
+                  "bairro_abreviado": "Cid Monções",
+                  "localidade": "São Paulo",
+                  "uf": "SP"
+              }
+          ]
+
+docs: |-
+  ## Buscar CEP
+
+  **(Buscar pelo Endereço)**
+
+  Consulta detalhes de um CEP específico.
